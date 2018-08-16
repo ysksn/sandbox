@@ -19,3 +19,14 @@ describe('Hoge', () => {
     })
   })
 })
+
+describe('document.getElementsByClassName("hoge")', () => {
+  beforeEach(() => {
+    document.body.innerHTML = __html__['test/test_index.html']
+  })
+
+  it('should return 3', () => {
+    const length = document.getElementsByClassName("hoge").length
+    assert.equal(3, length)
+  })
+})
